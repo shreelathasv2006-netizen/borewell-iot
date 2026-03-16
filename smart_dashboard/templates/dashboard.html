@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>Borewell Dashboard</h2>
+
+<div class="card">
+
+<p><b>Time:</b> {{ data["time"] }}</p>
+
+<p><b>Water Level:</b> {{ data["water"] }} cm</p>
+
+<p><b>Temperature:</b> {{ data["temp"] }} °C</p>
+
+<p><b>Humidity:</b> {{ data["humidity"] }} %</p>
+
+<p><b>Pump Status:</b> {{ data["pump"] }}</p>
+
+<p><b>Health Status:</b> {{ data["health"] }}</p>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>Sensor Data</h1>
+
+<table>
+
+<tr>
+<th>Time</th>
+<th>Water Level</th>
+<th>Temperature</th>
+<th>Pump Status</th>
+</tr>
+
+{% for row in data %}
+
+<tr>
+<td>{{ row.Time }}</td>
+<td>{{ row.Water_Level_cm }}</td>
+<td>{{ row.Temperature_C }}</td>
+<td>{{ row.Pump_Status }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}

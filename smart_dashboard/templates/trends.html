@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>Water Level Trend</h2>
+
+<div class="card">
+<canvas id="waterChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+
+const labels = {{ times | safe }};
+const data = {{ water | safe }};
+
+const ctx = document.getElementById('waterChart');
+
+new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: labels,
+        datasets: [{
+            label: 'Water Level (cm)',
+            data: data,
+            borderWidth: 2
+        }]
+    }
+});
+
+</script>
+
+{% endblock %}

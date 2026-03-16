@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>System Alerts</h1>
+
+<div class="card">
+
+<h3>Recent Alerts</h3>
+
+{% if alerts %}
+
+<ul>
+
+{% for alert in alerts %}
+
+<li>{{ alert }}</li>
+
+{% endfor %}
+
+</ul>
+
+{% else %}
+
+<p>No alerts detected</p>
+
+{% endif %}
+
+</div>
+
+{% endblock %}
